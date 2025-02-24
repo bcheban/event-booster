@@ -21,6 +21,10 @@ input,button{
     border: unset;
 }
 
+input:focus-visible {
+    outline: none;
+}
+
 button {
     cursor: pointer;
 }

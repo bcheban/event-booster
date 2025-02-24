@@ -1,5 +1,55 @@
 @import '/src/styles/reset.css';
 @import '/src/styles/color.css';
 body {
+    
+}
+
+.page-wrapper {
     background: black;
+    min-height: 100vh;
+}
+.header {
+    background: url(/src/images/header-bg.jpg) no-repeat center/cover;
+    padding: 40px 40px 133px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header__logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.header-title {
+    font-size: 50px;
+    text-align: center;
+    color: var(--pink);
+    width: 588px;
+    margin-bottom: 52px;
+
+}
+.header-searches {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+}
+.header-searches__ticket, .header-searches__country  {
+    background: rgba(255, 255, 255, 0.200);
+    border-radius: 20px;
+    color: var(--main-white);
+    padding: 10px 30px;
+    position: relative;
+}
+
+.header-searches__ticket::placeholder, .header-searches__country::placeholder {
+    color: var(--gray);
+}
+.header-searches__country {
+}
+.main {
+}
+.footer {
 }
