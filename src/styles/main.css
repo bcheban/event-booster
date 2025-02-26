@@ -38,6 +38,7 @@ body {
 }
 .header-searches__ticket, .header-searches__country  {
     background: rgba(255, 255, 255, 0.200);
+    backdrop-filter: blur(20px);
     border-radius: 20px;
     color: var(--main-white);
     padding: 10px 30px;
@@ -68,7 +69,7 @@ body {
 }
 
 .card {
-    width: 18%;
+    min-width: 18%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,4 +137,44 @@ position:relative
     height: 10px;
     left: -10px;
     top: 8px;
+}
+
+@media (max-width: 1024px) {
+    .header-title {
+        font-size: 40px;
+    }
+    .header__logo {
+        width: 141px;
+    }
+}
+
+@media (max-width:768px) {
+    .header-title {
+        font-size: 30px;
+        width: unset;
+    }
+    .header{
+        padding-top: 81px;
+        padding-bottom: 80px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .header-searches {
+        flex-direction: column;
+        row-gap: 25px;
+    }
+    .header{
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 425px) {
+    .header-title {
+        font-size: 18px;
+    }
+    .header{
+        padding-bottom: 30px;
+    }
 }
