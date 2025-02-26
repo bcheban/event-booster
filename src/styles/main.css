@@ -52,4 +52,55 @@ body {
 .main {
 }
 .footer {
+    padding: 80px 0px 19px 0px;
+}
+
+.footer-paragr {
+    color: var(--gray);
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+}
+
+.card {
+    width: 196px;
+    height: 312px;
+}
+
+.card-img {
+    border-radius: 50px 0;
+width: 180px;
+height: 227px;
+}
+
+.card-name {
+    font-weight: 700;
+font-size: 16px;
+text-align: center;
+color: var(--pink);
+padding-top: 5px;
+}
+
+.card-date {
+    font-weight: 400;
+font-size: 16px;
+text-align: center;
+color: var(--main-white);
+padding-top: 5px;
+}
+
+.card-location {
+    font-weight: 600;
+font-size: 14px;
+text-align: center;
+color: #fff;
+padding-top: 5px;
+}
+
+.card-location__name {
+    font-weight: 600;
+font-size: 14px;
+text-align: center;
+color: #fff;
+padding-top: 5px;
 }
