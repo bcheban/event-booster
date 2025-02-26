@@ -50,6 +50,11 @@ body {
 .header-searches__country {
 }
 .main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 180px;
+    justify-content: space-between;
+    row-gap: 50px;
 }
 .footer {
     padding: 80px 0px 19px 0px;
@@ -63,8 +68,25 @@ body {
 }
 
 .card {
-    width: 196px;
-    height: 312px;
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card::after {
+    content: '';
+    position: relative;
+    z-index: 2;
+    width: 153px;
+    height: 143px;
+    border: 1px solid #bc56c650;
+    bottom: 70%;
+    right: -28px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
 }
 
 .card-img {
@@ -103,4 +125,15 @@ font-size: 14px;
 text-align: center;
 color: #fff;
 padding-top: 5px;
+position:relative
+}
+
+.card-location__name::before {
+    content: '';
+    position: absolute;
+    background: url(/src/images/location.svg) no-repeat center/cover;
+    width: 7px;
+    height: 10px;
+    left: -10px;
+    top: 8px;
 }
