@@ -48,8 +48,8 @@ body {
 .header-searches__ticket::placeholder, .header-searches__country::placeholder {
     color: var(--gray);
 }
-.header-searches__country {
-}
+
+
 .main {
     display: flex;
     flex-wrap: wrap;
@@ -74,11 +74,14 @@ body {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    position: relative;
+    bottom: 55%;
+    right: -13px;
 }
 
 .card::after {
     content: '';
-    position: relative;
+    position: absolute;
     z-index: 2;
     width: 153px;
     height: 143px;
@@ -102,6 +105,7 @@ font-size: 16px;
 text-align: center;
 color: var(--pink);
 padding-top: 5px;
+
 }
 
 .card-date {
@@ -146,6 +150,10 @@ position:relative
     .header__logo {
         width: 141px;
     }
+    .main {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
 }
 
 @media (max-width:768px) {
@@ -156,6 +164,32 @@ position:relative
     .header{
         padding-top: 81px;
         padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 47%;
+    }
+    .card-img{
+        width: 128px;
+        height: 161px;
+    }
+    .main {
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .card::after {
+        right: 30px;
+        width: 108px;
+        height: 101px;
+    }
+    .footer {
+        padding-top: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
 
@@ -178,3 +212,4 @@ position:relative
         padding-bottom: 30px;
     }
 }
+
