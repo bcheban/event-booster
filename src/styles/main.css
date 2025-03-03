@@ -214,13 +214,45 @@ position:relative
 .modal-info-data-subtitle {
     font-size: 18px;
     color: var(--dark);
-
+    margin-bottom: 10px;
 }
+
+.date {
+    margin-bottom: 4px;
+}
+
+.place {
+    margin-bottom: 4px;
+}
+
+.second {
+    margin-bottom: 23px;
+}
+
 .modal-barcode {
+    margin-right: 13px;
 }
 .modal-info-data-buy {
+    font-family: var(--main-white);
+font-weight: 500;
+font-size: 16px;
+color: #fff;
+    border-radius: 5px;
+    width: 145px;
+    height: 40px;
+    background-color: var(--blue);
+margin-bottom: 20px;
+
 }
 .modal-more {
+    font-family: var(--main-white);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--blue);
+    border: 1px solid #dc56c5;
+border-radius: 5px;
+width: 255px;
+height: 40px;
 }
 
 @media (max-width: 1024px) {
