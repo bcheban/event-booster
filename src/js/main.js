@@ -34,17 +34,15 @@ function openModal() {
     overlay.style.display = "block";
 }
 
-// Close modal when clicking on close button
+
 document.querySelector(".modal-close").addEventListener("click", closeModal);
 
-// Close modal when clicking outside of it
 overlay.addEventListener("click", function (event) {
     if (event.target === overlay) {
         closeModal();
     }
 });
 
-// Open modal when clicking on any card
 cards.forEach((card) => {
     card.addEventListener("click", openModal);
 });
