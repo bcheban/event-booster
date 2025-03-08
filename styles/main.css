@@ -1,5 +1,5 @@
-@import '/src/styles/reset.css';
-@import '/src/styles/color.css';
+@import '/styles/reset.css';
+@import '/styles/color.css';
 body {
     
 }
@@ -9,7 +9,7 @@ body {
     min-height: 100vh;
 }
 .header {
-    background: url(/src/images/header-bg.jpg) no-repeat center/cover;
+    background: url(/images/header-bg.jpg) no-repeat center/cover;
     padding: 40px 40px 133px;
     position: relative;
     z-index: 1;
@@ -136,7 +136,7 @@ position:relative
 .card-location__name::before {
     content: '';
     position: absolute;
-    background: url(/src/images/location.svg) no-repeat center/cover;
+    background: url(/images/location.svg) no-repeat center/cover;
     width: 7px;
     height: 10px;
     left: -10px;
