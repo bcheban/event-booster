@@ -97,6 +97,7 @@ body {
     border-radius: 50px 0;
 width: 180px;
 height: 227px;
+object-fit: cover;
 }
 
 .card-name {
@@ -168,10 +169,10 @@ position:relative
 }
 .modal-close {
     position: absolute;
-    right: 30px;
-    top: 30px;
+    right: 15px;
+    top: 25px;
     cursor: pointer;
-
+    font-size: 30px;
 }
 .modal-close-line {
     width: 25px;
