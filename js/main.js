@@ -46,6 +46,33 @@ function createMarkup(arr) {
   }).join("");
 
   list.innerHTML = html;
+  const cards = document.querySelectorAll(".card")
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const modalClose = document.querySelector(".modal-close");
+console.log(cards)
+function closeModal() {
+  modal.style.display = "none";
+  overlay.style.display = "none";
+}
+closeModal()
+function openModal() {
+  modal.style.display = "flex";
+  overlay.style.display = "flex";
+}
+
+
+document.querySelector(".modal-close").addEventListener("click", closeModal);
+
+overlay.addEventListener("click", function (event) {
+  if (event.target === overlay) {
+      closeModal();
+  }
+});
+
+cards.forEach((card) => {
+  card.addEventListener("click", openModal);
+});
 }
 function searcPost() {
   const keyWord = searcInput.value;
@@ -79,33 +106,7 @@ const main = document.querySelector('.main')
 
 
 // script for modal - start 
-const cards = document.querySelectorAll(".card")
-const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");
-const modalClose = document.querySelector(".modal-close");
-console.log(cards)
-function closeModal() {
-  modal.style.display = "none";
-  overlay.style.display = "none";
-}
-closeModal()
-function openModal() {
-  modal.style.display = "flex";
-  overlay.style.display = "flex";
-}
 
-
-document.querySelector(".modal-close").addEventListener("click", closeModal);
-
-overlay.addEventListener("click", function (event) {
-  if (event.target === overlay) {
-      closeModal();
-  }
-});
-
-cards.forEach((card) => {
-  card.addEventListener("click", openModal);
-});
 
 // script for modal - end
 
