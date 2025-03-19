@@ -3,11 +3,11 @@
 // .then(response => response.json())
 // .then(data => console.log(data))
 // .catch(error => console.log(error))
-
+let page = 5;
 const getEventApi = async (keyword) => {
   if (keyword === "" || keyword === undefined || keyword === null){
       try {
-          const result = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=RKwTp5P44ztFFCbPCDFoxyCASf3hPfPS&size=20&page=5`).then((data) => {
+          const result = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=RKwTp5P44ztFFCbPCDFoxyCASf3hPfPS&size=20&page=${page}`).then((data) => {
               return data.json();
           });
           return result;
@@ -16,7 +16,7 @@ const getEventApi = async (keyword) => {
       }
   } else {
       try {
-          const result = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=RKwTp5P44ztFFCbPCDFoxyCASf3hPfPS&size=20&page=5&keyword=${keyword}`).then((data) => {
+          const result = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=RKwTp5P44ztFFCbPCDFoxyCASf3hPfPS&size=20&page=${page}&keyword=${keyword}`).then((data) => {
               return data.json();
           });
           return result;
@@ -50,6 +50,9 @@ function createMarkup(arr) {
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const modalClose = document.querySelector(".modal-close");
+
+const modalLogo = document.querySelector(".modal-logo");
+const modalPoster = document.querySelector(".modal-poster")
 console.log(cards)
 function closeModal() {
   modal.style.display = "none";
@@ -71,7 +74,11 @@ overlay.addEventListener("click", function (event) {
 });
 
 cards.forEach((card) => {
-  card.addEventListener("click", openModal);
+  card.addEventListener("click", function(){
+    modalLogo.src = card.firstElementChild.src
+    modalPoster.src = card.firstElementChild.src
+    openModal()
+  });
 });
 }
 function searcPost() {
@@ -109,4 +116,16 @@ const main = document.querySelector('.main')
 
 
 // script for modal - end
+
+// script for pagination - start
+const paginationPage = document.querySelectorAll(".footer-pagination-page")
+
+paginationPage.forEach((element) => {
+  element.addEventListener('click', (index) => {
+    paginationPage.forEach(element => {
+      element.classList.remove('active-page')
+    });
+    element.classList.add('active-page')
+  })
+});
 

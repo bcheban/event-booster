@@ -256,6 +256,24 @@ width: 255px;
 height: 40px;
 }
 
+.footer-pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-pagination-page{
+    color: white;
+    padding: 5px 12px;
+    cursor: pointer;
+}
+
+.active-page {
+    
+    border: 1px solid var(--pink);
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+
 @media (max-width: 1024px) {
     .header-title {
         font-size: 40px;
