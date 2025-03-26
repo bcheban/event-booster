@@ -3,7 +3,7 @@
 // .then(response => response.json())
 // .then(data => console.log(data))
 // .catch(error => console.log(error))
-let page = 5;
+let page = 1;
 const getEventApi = async (keyword) => {
   if (keyword === "" || keyword === undefined || keyword === null){
       try {
@@ -28,7 +28,9 @@ const getEventApi = async (keyword) => {
 // api - end
 getEventApi()
 getEventApi().then((data) => {
-  createMarkup(data._embedded)
+  if (data._embedded) {
+    createMarkup(data._embedded);
+  }
 });
 // show card - start
 const list = document.querySelector(".main");
@@ -58,7 +60,7 @@ function closeModal() {
   modal.style.display = "none";
   overlay.style.display = "none";
 }
-closeModal()
+
 function openModal() {
   modal.style.display = "flex";
   overlay.style.display = "flex";
@@ -96,36 +98,19 @@ searcInput.addEventListener("input", _.debounce(() => {
 
 const main = document.querySelector('.main')
 
-// for (let index = 0; index < 20; index++) {
-//   main.innerHTML += `
-//   <div class="card">
-//               <img src="images/Rectangle 6.png" alt="" class="card-img">
-//               <div class="card-deco">
-//               <h2 class="card-name">Eurovision 2021 finals!</h2>
-//               <h3 class="card-date">2021-05-13</h3>
-//               <p class="card-location__name">Palace of Ukraine</p>
-//   </div>
-//   `
-  
-// }
-
-// template for adaptive - end
-
-
-// script for modal - start 
-
-
-// script for modal - end
-
-// script for pagination - start
 const paginationPage = document.querySelectorAll(".footer-pagination-page")
 
 paginationPage.forEach((element) => {
   element.addEventListener('click', (index) => {
     paginationPage.forEach(element => {
       element.classList.remove('active-page')
+      
     });
     element.classList.add('active-page')
+    page = element.textContent
+    getEventApi(searcInput.value).then((data) => {
+      createMarkup(data._embedded)
+  });
   })
 });
 
