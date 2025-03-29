@@ -8,76 +8,78 @@
 </head>
 <body>
     <div class="page-wrapper">
-        <header class="header">
-            <img src="/images/logo.svg" alt="logo" class="header__logo">
-            <h1 class="header-title">FIND BEST EVENTS
-                AROUND THE WORLD
-            </h1>
-            <div class="header-searches">
-                <input type="text" placeholder="Start searching" class="header-searches__ticket">
-                <input type="text" placeholder="Choose country" class="header-searches__country">
-            </div>
-        </header>
-        <main class="main">
-            
-        </main>
-        <div class="overlay">
-            <div class="modal">
-                <div class="modal-close">
-                    <div class="modal-close-line"></div>
-                    <div class="modal-close-line"></div>
-                </div>
-                <img src="/images/Rectangle 6.png" alt="" class="modal-logo">
-                <div class="modal-info">
-                    <img src="/images/Rectangle 6.png" alt="" class="modal-poster">
-                    <div class="modal-info-data">
-                        <h3 class="modal-info-data-title">INFO</h3>
-                        <p class="modal-info-data-subtitle">Atlas Weekend is the largest music festival
-                            in Ukraine.More than 200 artists will create
-                            a proper music festival atmosphere on 10 stages</p>
+        <section class="header">
+            <div class="container">
+              <a href="/index.html" class="header__logo__link">
 
-                        <h3 class="modal-info-data-title">WHEN</h3>
-                        <p class="modal-info-data-subtitle date">2021-06-09</p>
-                        <p class="modal-info-data-subtitle">20:00 (Kyiv/Ukraine)</p>
+                  <img src="./images/logo.svg" alt="logo" class="header__logo__image" />
 
-                        <h3 class="modal-info-data-title">WHERE </h3>
-                        <p class="modal-info-data-subtitle place">Kyiv, Ukraine </p>
-                        <p class="modal-info-data-subtitle">VDNH</p>
-
-                        <h3 class="modal-info-data-title">WHO</h3>
-                        <p class="modal-info-data-subtitle">The Black Eyed Peas</p>
-
-                        <h3 class="modal-info-data-title">PRICES </h3>
-                        <p class="modal-info-data-subtitle">
-                            <img src="/images/barcode.svg" alt="" class="modal-barcode price">Standart 300-500 UAH
-                        </p>
-                        <button class="modal-info-data-buy">BUY TICKETS</button>
-
-                        <p class="modal-info-data-subtitle">
-                            <img src="/images/barcode.svg" alt="" class="modal-barcode">VIP 1000-1500 UAH</p>
-                        <button class="modal-info-data-buy">BUY TICKETS</button>
+              </a>
+          
+              <h1 class="header__title">FIND BEST EVENTS <br />AROUND THE WORLD</h1>
+              <form class="header__form" id="headerForm">
+                <label class="header__form__label">
+                  <input type="text" class="header__form__input" placeholder="Start searching" id="searchInput" />
+                  <button type="submit" class="header__form__button search__button" id="searchButton">
+                    <svg id="headerInputIcon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                      fill="none">
+                      <path
+                        d="M1.50905 1.50905C2.48217 0.535922 3.77599 0 5.15217 0C6.52835 0 7.82217 0.535922 8.79527 1.50905C9.76838 2.48215 10.3043 3.77597 10.3043 5.15213C10.3043 6.41032 9.8561 7.59949 9.0356 8.53786L11.8969 11.3992C12.0344 11.5366 12.0344 11.7595 11.8969 11.8969C11.8282 11.9656 11.7381 12 11.6481 12C11.558 12 11.4679 11.9656 11.3992 11.8969L8.53791 9.03558C7.59954 9.85606 6.41037 10.3043 5.15217 10.3043C3.77597 10.3043 2.48219 9.76838 1.50907 8.79525C0.535968 7.82215 4.673e-05 6.52833 4.673e-05 5.15215C4.673e-05 3.77597 0.535945 2.48215 1.50905 1.50905ZM2.00677 8.29755C3.74116 10.0319 6.56316 10.0319 8.29755 8.29755C10.0319 6.56318 10.0319 3.74114 8.29755 2.00677C7.43027 1.13948 6.2914 0.705984 5.15215 0.705984C4.01318 0.705984 2.87384 1.1397 2.00674 2.00677C0.272413 3.74112 0.272413 6.56316 2.00677 8.29755Z"
+                        fill="#939393" />
+                    </svg>
+                  </button>
+                </label>
+                <label class="header__form__label">
+                  <input type="text" class="header__form__input" placeholder="Choose country" id="countryInput" />
+                  <button type="button" class="header__form__button country__button" id="countryButton">
+                    <svg id="headerInputIcon" xmlns="http://www.w3.org/2000/svg" width="13" height="8" viewBox="0 0 13 8"
+                      fill="none" class="arrowIcon">
+                      <path d="M6.5 8L0.00480968 0.5L12.9952 0.499999L6.5 8Z" fill="#939393" />
+                    </svg>
+                  </button>
+                  <!-- <div class="header__select">
+                    <div class="header__selected">
+                      <img id="selectedFlag" src="" alt="" class="flag__img" />
                     </div>
-                </div>
-                <button class="modal-more">MORE FROM THIS AUTHOR</button>
+                    <ul class="header__dropdown">
+                    </ul>
+                  </div> -->
+                </label>
+              </form>
+          
+          
+          
             </div>
-        </div>
-        <footer class="footer">
-            <div class="footer-pagination">
-                <p class="footer-pagination-page active-page">1</p>
-                <p class="footer-pagination-page">2</p>
-                <p class="footer-pagination-page">3</p>
-                <p class="footer-pagination-page">4</p>
-                <p class="footer-pagination-page ">5</p>
-                <p class="footer-pagination-page">6</p>
-                <p class="footer-pagination-page">7</p>
-                <p class="footer-pagination-page">8</p>
-                <p class="footer-pagination-page">9</p>
-                <p class="footer-pagination-page">10</p>
+          </section>
+          <section class="cards__section">
+            <div class="container">
+              <ul class="cards__list" id="js-list"></ul>
             </div>
-            <p class="footer-paragr">© 2021 | All Rights Reserved | Developed with ♥ by GoIT Students</p>
-        </footer>
+          </section>
+          <div class="backdrop hidden" id="modal-card"></div>
+          <section class="pagination__section">
+            <div class="container">
+              <ul class="pagination__list"></ul>
+            </div>
+          </section>
+          <footer class="footer">
+            <div class="container">
+              <p class="footer-desc">
+                © 2021 | All Rights Reserved | Developed with 🖤 by
+                <a class="footer-link" href="https://goit.global/ua/" target="_blank" rel="noopener noreferrer">
+                  GoIT Students
+                </a>
+              </p>
+            </div>
+          </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js" type="module"></script>
+    <!-- <script src="/js/fetchEvent.js" type="module" defer></script>
+    <script src="/js/baseMarkUp.js" type="module" defer></script>
+    <script src="/js/modalCardsRender.js" type="module" defer></script>
+    <script src="/js/modalCard.js" type="module" defer></script>
+    <script src="/js/pagination.js" type="module" defer></script>
+    <script src="/js/header/fetchCountries.js" type="module" defer></script> -->
 </body>
 </html>
