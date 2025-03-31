@@ -1,0 +1,39 @@
+.pagination__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.pagination__list__button {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+  font-family: 'Montserrat', serif;
+  font-weight: 400;
+}
+
+.pagination__list__button:hover {
+  color: #dc56c5;
+}
+
+.active {
+  border-radius: 10px 0px;
+  border: 1px solid #dc56c5;
+  color: #dc56c5;
+}
+
+.pagination__dots {
+  display: inline-block;
+  margin: 0 5px;
+  color: white;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .pagination__section {
+    padding-bottom: 17px;
+  }
+}
