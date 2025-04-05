@@ -92,14 +92,9 @@ async function renderCountries() {
       { code: 'VE', name: 'Venezuela' }
     ];
     
-
-    // const select = document.querySelector('.header__select');
-    // const selectedFlag = document.getElementById('selectedFlag');
-    // const dropdown = document.querySelector('.header__dropdown');
     const button = document.getElementById('countryButton');
     const input = document.getElementById('countryInput');
 
-    // selectedFlag.style.display = 'none';
 
     function createOption(country) {
       const flagSrc = `/imgs/header/flags/${country.code.toLowerCase()}.png`;
@@ -111,60 +106,6 @@ async function renderCountries() {
       `;
     }
 
-    // function dropdownSearch(filtered) {
-    //   dropdown.innerHTML = '';
-    //   filtered.forEach(country => {
-    //     dropdown.insertAdjacentHTML('beforeend', createOption(country))
-    //   });
-    // }
-
-    // button.addEventListener('click', () => {
-    //   dropdown.classList.toggle('open');
-    //   if (dropdown.children.length === 0) {
-    //     countries.forEach(country => {
-    //       dropdown.insertAdjacentHTML('beforeend', createOption(country));
-    //     });
-    //   }
-    // });
-
-    // dropdown.addEventListener('click', async e => {
-    //   const option = e.target.closest('.select__option');
-    //   if (option) {
-    //     const countryName = option.textContent.trim();
-    //     const selectedCountry = countries.find(
-    //       country => country.name === countryName
-    //     );
-
-    //     selectedFlag.style.display = 'block';
-    //     selectedFlag.src = `/imgs/header/flags/${selectedCountry.code.toLowerCase()}.png`;
-    //     selectedFlag.alt = selectedCountry.name;
-    //     select.classList.remove('open');
-
-    //     const countryCode = e.target.dataset.id;
-    //     const countryQuery = countryCode.toLowerCase();
-    //     eventsApiService.countryCode = selectedCountry.code;
-    //     eventsApiService.page = 0;
-
-    //       console.log(countryQuery);
-
-    //     clearEventsList();
-    //     clearPagination();
-    //     await renderEvent({countryQuery})
-    //   }
-    // });
-
-    // input.addEventListener('input', e => {
-    //   const search = e.target.value.toLowerCase()
-    //   const filtered = countries.filter(country =>
-    //     country.name.toLowerCase().includes(search)
-    //   );
-
-    //   dropdownSearch(filtered)
-    // })
-
-    // window.addEventListener('click', () => {
-    //   dropdown.classList.remove('open');
-    // });
 
   } catch (error) {
     console.error(error);
